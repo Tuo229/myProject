@@ -1,0 +1,466 @@
+{% extends 'immobapp/layouts/base.html' %}
+
+
+
+
+{% block supheader %}
+
+  <div class="" style="height: 580px;">
+
+    <div class="view navbars-bottom" style="background-image: url('./img/3246.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        <!-- Mask & flexbox options-->
+        <div class="mask rgba-gradient align-items-center">
+          <!-- Content -->
+          <div class="container-fluid">
+            <!--Grid row-->
+            <div class="row">
+              <!--Grid column-->
+              <div class="col-xl-3">
+
+              </div>
+              <div class="col-xl-6 col-sm-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
+                <center><a href="#" class="btn btn-orange white-text h3">Mettre votre bien en vente ou en location</a></center>
+                <h1 class="h1-responsive font-weight-bold mt-sm-5">
+                    Commencer votre recherche
+                </h1>
+                <center>
+                  <button class="btn btn-orange" id="location">Location</button>
+                  <button class="btn btn-orange" id="vente">Vendre</button>
+                  <button class="btn btn-orange" id="achat">Achat</button>
+                  <button class="btn btn-orange" id="neuf">Neuf</button>
+                </center>
+                <hr class="hr-light">
+                
+                <!--Formulaire de recherche minimal-->
+                <div class="card black-text">
+                  <div id="locate" class="text-justify recherche">
+                    <form action="aficher.html">
+                      <p class="md-form mb-5">
+                        J'aimerais louer une maison de <select class="form-recherche" name="piece" id="">
+                          <option value="1 pièce">1 pièce</option>
+                          <option value="2 pièces">2 pièces</option>
+                          <option value="3 pièces">3 pièces</option>
+                          <option value="4 pièces">4 pièces</option>
+                          <option value="5 pièces">5 pièces</option>
+                          <option value="6 pièces">6 pièces</option>
+                          <option value="7 pièces">7 pièces</option>
+                        </select> à 
+                        <input class="form-recherche" type="text" placeholder="ville, code postale, departement" style="width: 235px;"> pour un budget min 
+                        de <input class="form-recherche" type="text" placeholder="budget min"> et max de <input class="form-recherche" type="text" placeholder="budget max">  
+                      </p>
+                      <center><input class="btn btn-orange" type="submit" value="Valider"></center>
+                    </form>
+                  </div>
+
+                  <div id="solde" class="text-justify recherche">
+                    <form action="aficher.html">
+                      <p class="md-form mb-5">
+                        J'aimerais vendre une maison de <select class="form-recherche" name="piece" id="">
+                          <option value="1 pièce">1 pièce</option>
+                          <option value="2 pièces">2 pièces</option>
+                          <option value="3 pièces">3 pièces</option>
+                          <option value="4 pièces">4 pièces</option>
+                          <option value="5 pièces">5 pièces</option>
+                          <option value="6 pièces">6 pièces</option>
+                          <option value="7 pièces">7 pièces</option>
+                        </select> à 
+                        <input class="form-recherche" type="text" placeholder="ville, code postale, departement" style="width: 235px;"> pour un budget min 
+                        de <input class="form-recherche" type="text" placeholder="budget min"> et max de <input class="form-recherche" type="text" placeholder="budget max">  
+                      </p>
+                      <center><input class="btn btn-orange" type="submit" value="Valider"></center>
+                    </form>
+                  </div>
+
+                  <div id="paye" class="text-justify recherche">
+                    <form action="aficher.html">
+                      <p class="md-form mb-5">
+                        J'aimerais acheter une maison de <select class="form-recherche" name="piece" id="">
+                          <option value="1 pièce">1 pièce</option>
+                          <option value="2 pièces">2 pièces</option>
+                          <option value="3 pièces">3 pièces</option>
+                          <option value="4 pièces">4 pièces</option>
+                          <option value="5 pièces">5 pièces</option>
+                          <option value="6 pièces">6 pièces</option>
+                          <option value="7 pièces">7 pièces</option>
+                        </select> à 
+                        <input class="form-recherche" type="text" placeholder="ville, code postale, departement" style="width: 235px;"> pour un budget min 
+                        de <input class="form-recherche" type="text" placeholder="budget min"> et max de <input class="form-recherche" type="text" placeholder="budget max">  
+                      </p>
+                      <center><input class="btn btn-orange" type="submit" value="Valider"></center>
+                    </form>
+                  </div>
+
+                  <div id="new" class="text-justify recherche">
+                    <form action="aficher.html">
+                      <p class="md-form mb-5">
+                        J'aimerais acheter une maison de <select class="form-recherche" name="piece" id="">
+                          <option value="1 pièce">1 pièce</option>
+                          <option value="2 pièces">2 pièces</option>
+                          <option value="3 pièces">3 pièces</option>
+                          <option value="4 pièces">4 pièces</option>
+                          <option value="5 pièces">5 pièces</option>
+                          <option value="6 pièces">6 pièces</option>
+                          <option value="7 pièces">7 pièces</option>
+                        </select> neuf à 
+                        <input class="form-recherche" type="text" placeholder="ville, code postale, departement" style="width: 235px;"> pour un budget min 
+                        de <input class="form-recherche" type="text" placeholder="budget min"> et max de <input class="form-recherche" type="text" placeholder="budget max">  
+                      </p>
+                      <center><input class="btn btn-orange" type="submit" value="Valider"></center>
+                    </form>
+                  </div>
+                  
+                  <div class="card-footer">
+                    Votre dernière opération : <a href="">Location</a>
+                  </div>
+                </div>
+
+              </div>
+              <!--Grid column-->
+              <!--Grid column-->
+              <div class="col-md-3 col-xl-3 mt-xl-2 wow fadeInRight" data-wow-delay="0.3s">
+                
+                <img src="#" alt="" class="img-fluid">
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </div>
+          <!-- Content -->
+        </div>
+        <!-- Mask & flexbox options-->
+    </div>
+  </div>
+{% endblock supheader %}
+
+{% block content %}
+
+
+    <main class="mt-4">
+
+      <div class="col-8 d-flex flex-column h4 offset-2"> 
+        <h2 class="text-center h2">Nous mettons les biens d'immobilier en votre disposition</h2>
+        <div class="p-2 text-center">
+          Louez, acchetz, vendez votre maison sur notre plate forme vouz avez des clients venant de toutes les régions du pays et
+          même de l'Afrique.
+        </div>
+      </div>
+      <!--Presentation des services-->
+      <div class="d-flex align-content-start flex-wrap">
+        <div class="p-2">
+          <div class="view" style="height: 300px;">
+            <img src="./img/maison.jpg" class="img-fluid" alt="placeholder" style="width: 423.6px; height: 300px;">
+            <div class="mask flex-center waves-effect waves-light rgba-teal-strong">
+              <p class="text-center white-text h4">Biens Immobilier</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-2">
+          <div class="view" style="height: 300px;">
+            <img src="./img/3246.jpg" class="img-fluid" alt="placeholder" style="width: 423.6px; height: 300px;">
+            <div class="mask flex-center waves-effect waves-light rgba-teal-strong">
+              <p class="text-center white-text h4">Besoin immoblier</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-2">
+          <div class="view" style="height: 300px;">
+            <img src="./img/3246.jpg" class="img-fluid" alt="placeholder" style="width: 423.6px; height: 300px;">
+            <div class="mask flex-center waves-effect waves-light rgba-teal-strong">
+              <p class="text-center white-text h4">Services de conception de plan et de réhabilitation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Fin de la presentation-->
+      
+      <!--Debut de l'aide pour comprendre le fonctionnement de nos services -->
+      <div class="d-flex align-content-start flex-wrap">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-sm-6">
+              <h4 class="text-center h4">Services immobilier</h4>
+              <div class="p-2 text-justify">
+                incidunt labore fugit molestiae magni non. item 1 Lorem ipsum dolor sit amet consectetur 
+                adipisicing elit. Culpa qui ullam inventore rem magni aliquam excepturi aspernatur laboriosam 
+                deleniti obcaecati. Voluptatibus corrupti sit obcaecati quae. Ratione distinctio dolorum reprehenderit neque!
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <h4 class="text-center h4">Services conception de plan et de réhabilitation</h4>
+              <div class="p-2 text-justify">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Magnam deleniti obcaecati, error placeat eum accusamus aut odit fugit tenetur cum inventore 
+                sequi ea libero iure ullam vel laboriosam dicta eius. autem tenetur obcaecatiautem tenetur 
+                obcaecati et explicabo? item 2
+              </div>
+            </div>
+          </div>   
+        </div>
+      </div>
+      <!--Fin des presentations-->
+
+      <!--Debut des derniers articles publiés-->
+      <h2 class="text-center h2">Nos dernières publications</h2>
+      <div class="d-flex align-content-start flex-wrap">
+        <div class="row">
+          <div class="col-sm-3 p-2">
+             <div class="card">
+                <picture>
+                  <source srcset="./img/3246.jpg" type="image/svg+xml">
+                  <img src="./img/3246.jpg" class="img-fluid img-thumbnail" alt="...">
+                </picture>
+                <div class="text-content">
+                  <p class="text-center mt-2"><a href="#" class="h4">Louer</a></p>
+                  <p class="text-center mt-2"><strong class="h4">Une villa a louer</strong></p>
+                  <p class="text-center mt-2">A Treichville Gare de bassam</p>
+                  <p class="text-center"><strong class="h4">200 000 fr/mois</strong></p>
+                  <p class="text-center"><a href="#">Contacts</a></p>
+                </div>
+             </div>
+          </div>
+          <div class="col-sm-3 p-2">
+            <div class="card">
+              <picture>
+                <source srcset="./img/3246.jpg" type="image/svg+xml">
+                <img src="./img/3246.jpg" class="img-fluid img-thumbnail" alt="...">
+              </picture>
+              <div class="text-content">
+                <p class="text-center mt-2"><a href="#" class="h4">Louer</a></p>
+                <p class="text-center mt-2"><strong class="h4">Une villa a louer</strong></p>
+                <p class="text-center mt-2">A Treichville Gare de bassam</p>
+                <p class="text-center"><strong class="h4">200 000 fr/mois</strong></p>
+                <p class="text-center"><a href="#">Contacts</a></p>
+              </div>
+           </div>
+          </div>
+          <div class="col-sm-3 p-2">
+            <div class="card">
+              <picture>
+                <source srcset="./img/3246.jpg" type="image/svg+xml">
+                <img src="./img/3246.jpg" class="img-fluid img-thumbnail" alt="...">
+              </picture>
+              <div class="text-content">
+                <p class="text-center mt-2"><a href="#" class="h4">Louer</a></p>
+                <p class="text-center mt-2"><strong class="h4">Une villa a louer</strong></p>
+                <p class="text-center mt-2">A Treichville Gare de bassam</p>
+                <p class="text-center"><strong class="h4">200 000 fr/mois</strong></p>
+                <p class="text-center"><a href="#">Contacts</a></p>
+              </div>
+           </div>
+          </div>
+          <div class="col-sm-3 p-2">
+            <div class="card">
+              <picture>
+                <source srcset="./img/3246.jpg" type="image/svg+xml">
+                <img src="./img/3246.jpg" class="img-fluid img-thumbnail" alt="...">
+              </picture>
+              <div class="text-content">
+                <p class="text-center mt-2"><a href="#" class="h4">Louer</a></p>
+                <p class="text-center mt-2"><strong class="h4">Une villa a louer</strong></p>
+                <p class="text-center mt-2">A Treichville Gare de bassam</p>
+                <p class="text-center"><strong class="h4">200 000 fr/mois</strong></p>
+                <p class="text-center"><a href="#">Contacts</a></p>
+              </div>
+           </div> 
+          </div>
+        </div>
+      </div>
+      <p class="text-center h4"><a href="./aficher.html">Voir plus...</a></p>
+        <!--fin des derniers articles publiés-->
+      <p class="mt-5"></p>
+      <!--fin Lien pour chercher ou publier un bien-->
+    </main>
+  <!--Main layout-->
+  </div>
+
+  <!--Immage de font-->
+  <div class="" style="height: 700px;">
+
+    <div class="view navbars-bottom" style="background-image: url('./img/3246.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        <!-- Mask & flexbox options-->
+        <div class="mask rgba-gradient align-items-center">
+          <!-- Content -->
+          <div class="container-fluid">
+            <!--Grid row-->
+            <div class="row">
+              <!--Grid column-->
+              <div class="col-xl-5 col-sm-5 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
+                <h1 class="h1-responsive font-weight-bold mt-sm-5">
+                    Commencer votre recherche
+                </h1>
+              
+                <hr class="hr-light">
+ 
+                
+              </div>
+              <!--Grid column-->
+              <!--Grid column-->
+              <div class="col-md-0 col-xl-5 mt-xl-5 wow fadeInRight" data-wow-delay="0.3s">
+                <img src="#" alt="" class="img-fluid">
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </div>
+          <!-- Content -->
+        </div>
+        <!-- Mask & flexbox options-->
+    </div>
+  </div>
+  <!--Fin-->
+  
+  <div class="modal fade" id="modalSubscriptionForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">S'inscrire</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <i class="fas fa-user prefix grey-text"></i>
+          <input type="text" id="form3" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form3">Identifiant</label>
+        </div>
+
+        <div class="md-form mb-4">
+          <i class="fas fa-envelope prefix grey-text"></i>
+          <input type="email" id="form2" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form2">Email</label>
+        </div>
+        <div class="md-form mb-4">
+          <i class="fas fa-envelope prefix grey-text"></i>
+          <input type="password" id="pawd" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="pwd">Mot de passe</label>
+        </div>
+        <div class="md-form mb-4">
+          <i class="fas fa-envelope prefix grey-text"></i>
+          <input type="password" id="confirm" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="confirm">Confirmer le mot de passe</label>
+        </div>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <input type="submit" class="btn text-white" value="Envoyer" style="background-color: #fb0;">
+      </div>
+      <center><p class="">J'ai déjà un compte <a href="#" data-toggle="modal" data-target="#modalLoginForm">connecte-toi</a></p></center>
+    </div>
+  </div>
+  </div>
+
+ 
+
+
+  <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Connexion</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <i class="fas fa-envelope prefix grey-text"></i>
+          <input type="email" id="defaultForm-email" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="defaultForm-email">Email ou identifiant</label>
+        </div>
+
+        <div class="md-form mb-4">
+          <i class="fas fa-lock prefix grey-text"></i>
+          <input type="password" id="defaultForm-pass" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="defaultForm-pass">Mot de passe</label>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <input type="submit" class="btn text-white" value="Se connecter" style="background-color: #fb0;">
+      </div>
+      <center><p class=""> <a href="#" data-toggle="modal" data-target="#modalLoginForm">Mot de passe oublié</a></p></center>
+    </div>
+  </div>
+
+
+{% endblock content %}
+
+
+{% block footer %}
+
+
+  <!--Footer-->
+  <footer class="page-footer text-center font-small warning-color mt-4 wow fadeIn">
+
+    <!--Call to action-->
+    <div class="pt-4">
+      <a class="text-white h4" href="#" 
+        role="button">Afrique Immobilier ---
+      </a>
+      
+      <a class="text-white h4" href="#"  role="button">Start
+        Up
+      </a>
+    </div>
+    <!--/.Call to action-->
+
+    <hr class="my-4">
+
+    <!-- Social icons -->
+    <div class="pb-4">
+      <a href="#" >
+        <i class="fab fa-facebook-f mr-3"></i>
+      </a>
+
+      <a href="#" >
+        <i class="fab fa-twitter mr-3"></i>
+      </a>
+
+      <a href="#" >
+        <i class="fab fa-youtube mr-3"></i>
+      </a>
+
+      <a href="#" >
+        <i class="fab fa-google-plus-g mr-3"></i>
+      </a>
+
+      <a href="https://dribbble.com/mdbootstrap" >
+        <i class="fab fa-dribbble mr-3"></i>
+      </a>
+
+      <a href="#" >
+        <i class="fab fa-pinterest mr-3"></i>
+      </a>
+
+      <a href="#" >
+        <i class="fab fa-github mr-3"></i>
+      </a>
+
+      <a href="#" >
+        <i class="fab fa-codepen mr-3"></i>
+      </a>
+    </div>
+    <!-- Social icons -->
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+      © 2020 Copyright:
+      <a href="#" > afriqueimmob.com </a>
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+
+ <script>
+    $(document).ready(function(){
+      alert("Salut à tous")
+    });
+    });
+ </script>
+{% endblock footer %}
+
+ 

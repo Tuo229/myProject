@@ -1,0 +1,9 @@
+{% extends 'immobapp/layouts/base.html' %}
+
+{% block content %}
+
+<form method='post'>
+    {% csrf_token %}
+    {{ userForm }}
+</form>
+{% endblock content %}

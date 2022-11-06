@@ -1,0 +1,185 @@
+{% extends 'immobapp/layouts/base.html' %} {% load crispy_forms_tags %}
+
+{% block supheader %}
+     <div class="" style="height: 500px;">
+
+        <div class="view navbars-bottom" style="background-image: url('./img/3246.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+            <!-- Mask & flexbox options-->
+            <div class="mask rgba-gradient align-items-center">
+              <!-- Content -->
+              <div class="container">
+                <!--Grid row-->
+                <div class="row">
+                  <!--Grid column-->
+                  <div class="col-md-12 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
+                    <h1 class="h1-responsive font-weight-bold mt-sm-5">
+                        Vendre ou mettre en location mon bien avec une agence immobilière
+                    </h1>
+                    <hr class="hr-light">
+                    <h6 class="mb-4">
+                        Que vous soyez bailleur ou vendeur, confier votre bien à une agence immobilière est le meilleur moyen de trouver rapidement un locataire ou un acquéreur.
+                        En complétant le formulaire ci-dessous, vous serez rapidement mis en contact avec une sélection de professionnels du secteur qui pourront vous accompagner.
+                    </h6>
+                    <center>
+                        <a href='#vente' class="btn my-color" id="vente-a">Vendre mon bien</a>
+                        <a href='#vente' class="btn my-color" id="location-a">Mettre mon bien en location</a>
+                    </center>
+                  </div>
+                  <!--Grid column-->
+                  <!--Grid column-->
+                  <div class="col-md-0 col-xl-5 mt-xl-5 wow fadeInRight" data-wow-delay="0.3s">
+                    <img src="#" alt="" class="img-fluid">
+                  </div>
+                  <!--Grid column-->
+                </div>
+                <!--Grid row-->
+              </div>
+              <!-- Content -->
+            </div>
+            <!-- Mask & flexbox options-->
+          </div>
+    </div>
+
+{% endblock supheader %}
+
+{% block content %}
+      <p>
+        {% if messages != 'SUCCESS' %}
+          {{message}}
+        {% endif %}
+      </p>
+
+  <div class="container-fluid">
+
+    <main class="mt-4">
+
+      <div id="vente" style='background: #aaa;'>
+          <!-- Default form register -->
+            <form class="text-center border border-light p-5" action="" method='post'>
+
+              {% csrf_token %}
+
+                <p class="h4 mb-4" id='ancre_p'>Je veux vendre mon bien</p>
+
+
+                {{ form }}
+                <label>Ville : </label>
+                <input type='text' name='city' />
+
+                <p>Information personnel </p>
+                
+
+    
+
+                <!-- Newsletter -->
+                <!--<div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="defaultRegisterFormNewsletter">
+                    <label class="custom-control-label" for="defaultRegisterFormNewsletter">Souscrire à la newsletter</label>
+                </div>-->
+
+                
+
+                <!-- Sign up button -->
+                <input class="btn my-4 btn-block my-color text-white" type="submit" value="Envoyer ma demande">
+
+                <!-- Social register -->
+                <p>or sign up with:</p>
+
+                <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+                <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+                <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
+                <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+
+                <hr>
+
+                <!-- Terms of service -->
+                <p>By clicking
+                    <em>Sign up</em> you agree to our
+                    <a href="" target="_blank">terms of service</a>
+
+            </form>
+            <!-- Default form register -->
+      </div>
+
+    </main>
+  <!--Main layout-->
+  </div>
+
+{% endblock content %}
+
+{% block footer %}
+ 
+  
+  <!--Footer-->
+  <footer class="page-footer text-center font-small warning-color mt-4 wow fadeIn">
+
+    <!--Call to action-->
+    <div class="pt-4">
+      <a class="text-white h4" href="#" 
+        role="button">Afrique Immobilier ---
+      </a>
+      
+      <a class="text-white h4" href="#"  role="button">Start
+        Up
+      </a>
+    </div>
+    <!--/.Call to action-->
+
+    <hr class="my-4">
+
+    <!-- Social icons -->
+    <div class="pb-4">
+      <a href="#" >
+        <i class="fab fa-facebook-f mr-3"></i>
+      </a>
+
+      <a href="#" >
+        <i class="fab fa-twitter mr-3"></i>
+      </a>
+
+      <a href="#" >
+        <i class="fab fa-youtube mr-3"></i>
+      </a>
+
+      <a href="#" >
+        <i class="fab fa-google-plus-g mr-3"></i>
+      </a>
+
+      <a href="https://dribbble.com/mdbootstrap" >
+        <i class="fab fa-dribbble mr-3"></i>
+      </a>
+
+      <a href="#" >
+        <i class="fab fa-pinterest mr-3"></i>
+      </a>
+
+      <a href="#" >
+        <i class="fab fa-github mr-3"></i>
+      </a>
+
+      <a href="#" >
+        <i class="fab fa-codepen mr-3"></i>
+      </a>
+    </div>
+    <!-- Social icons -->
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+      © 2020 Copyright:
+      <a href="#" > afriqueimmob.com </a>
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+
+   <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+    
+  </script>
+  <!--/.Footer-->
+{% endblock footer %}
+
+ 
+
